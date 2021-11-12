@@ -22,12 +22,18 @@
   height: 45px;
 }
 
+/* ----------- Section Formulário de Contato ----------- */
+.section1{
+
+
+}
+
 /* ----------- Main ----------- */
-.gravida-img{
+.primeira-img{
 
-  background-image: url(./img/melancia.jpg);
+  background-image: url(./img/familia.jpg);
 
-  height: 58vw;
+  height: 46vw;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -49,4 +55,11 @@
 .creditos{
   padding: 5px !important;
   font-size: 14px;
+}
+
+#btn-subir {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  
 }

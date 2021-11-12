@@ -17,10 +17,10 @@
   <body>
     <header>
       <!-- Menu - Nav bar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-dark py-3">
 
         <!-- Logo -->
-        <a class="" href="#">
+        <a class="" href="index.html">
           <img src="./img/IMG_5364.PNG" class="imgLogo" alt="">
         </a>
 
@@ -29,11 +29,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <!-- Navbar - MENU -->
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav text-center">
 
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Agendar <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html">Contato <span class="sr-only">(current)</span></a>
             </li>
 
             <li class="nav-item dropdown">
@@ -41,62 +42,127 @@
                 Adulto
               </a>
               <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item text-white" href="#">Casais</a>
-                <a class="dropdown-item text-white" href="#">Feminino</a>
-                <a class="dropdown-item text-white" href="#">Masculino</a>
+                <a class="dropdown-item text-white" href=""
+                onclick="ancora('#casais-ancora')" data-toggle="collapse" data-target=".navbar-collapse.show">Casais</a>
+                <a class="dropdown-item text-white" href="" onclick="ancora('#feminino-ancora')" data-toggle="collapse" data-target=".navbar-collapse.show">Feminino</a>
+                <a class="dropdown-item text-white" href="" onclick="ancora('#masculino-ancora')" data-toggle="collapse" data-target=".navbar-collapse.show">Masculino</a>
               </div>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Gestante</a>
+              <a class="nav-link" href=""
+              onclick="ancora('#gestante-ancora')" 
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show">Gestante</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="#">Newborn</a>
+              <a class="nav-link active" href="" onclick="ancora('#newborn-ancora')" 
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show">Newborn</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Família</a>
+              <a class="nav-link" href="" onclick="ancora('#familia-ancora')" 
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show">Família</a>
             </li>
-
+            
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Festas
               </a>
 
               <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item text-white" href="#">15 Anos</a>
-                <a class="dropdown-item text-white" href="#">Batizados</a>
-                <a class="dropdown-item text-white" href="#">Aniversários</a>
+                <a class="dropdown-item text-white" href="" onclick="ancora('#festas-ancora')" 
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show">15 Anos</a>
+                <a class="dropdown-item text-white" href="" onclick="ancora('#festas-ancora')" 
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show">Batizados</a>
+                <a class="dropdown-item text-white" href="" onclick="ancora('#festas-ancora')" 
+              data-toggle="collapse"
+              data-target=".navbar-collapse.show">Aniversários</a>
               </div>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href=""
+              onclick="ancora('#redes-sociais')" data-toggle="collapse" data-target=".navbar-collapse.show">Redes Sociais</a>
+            </li>
+
+
           </ul>
         </div>
       </nav>
     </header>
 
-    <main>
-      <!-- Imagem 1 - Grávida -->
-      <div class="img-responsive text-left gravida-img d-flex img-thumbnail"></div>
+    <main id="inicio-ancora">
+      <!-- Imagem 1 - Mural inicial -->
+      <div class="img-responsive text-left primeira-img d-flex img-thumbnail">
+        <div class="container-fluid">
+        </div>
+      </div>
 
-      <!-- galeria de grávidas -->
+      <!-- div Formulário de contato -->
+      <div class="container my-5">
+        <section class="container section1">
+
+          <!-- linha 1 -->
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="text-secondary">Quer uma foto personalizada?</h2>
+            </div>
+          </div>
+
+          <!-- linha 2 -->
+          <div class="row">
+            <div class="col-md-12">
+              <form>
+
+                <!-- campo usuário -->
+                <div class="form-group py-0">
+                  <label for="nomeCliente">Nome</label>
+                  <input type="email" class="form-control py-0" id="nomeCliente" required>
+                </div>
+
+                <div class="form-group py-0">
+                  <label for="tel" class="form-label">DDD + Telefone</label>
+                  <input type="tel" class="form-control py-0" id="tel">
+                </div>
+
+                <div class="form-group form-check py-0">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Aceito receber proposta via Telegram e/ou Whatsapp</label>
+                </div>
+
+                <!-- botão entrar -->
+                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- galeria de produtos -->
       <section class="container">
-        <!-- linha 1 - Título -->
-        <div class="row text-secondary mt-2">
+        <!-- Título ADULTOS -->
+        <div class="row text-secondary mt-2 border-top pt-3">
           <div class="col-md-12">
-            <h2>Grávidas</h2>
+            <h2 id="casais-ancora">Adultos</h2>
           </div>
         </div>
 
-        <!-- linha 1 -->
+        <!-- linha 1 Familia / Casais-->
         <div class="row">
 
           <!-- card 1 -->
           <div class="col-md-4">
             <div class="card mb-3">
-              <img src="./img/melancia.jpg" alt="foto_gravida_1">
+              <img src="./img/familia2.jpg" alt="foto_gravida_1">
               <div class="card-body text-center">
-                <h5 class="card-title">Grávida 01</h5>
+                <h5 class="card-title">Casais 01<br>R$15,00</h5>
                 <a href="" class="btn btn-dark btn-block">Comprar</a>
               </div>
             </div>
@@ -105,9 +171,9 @@
           <!-- card 2 -->
           <div class="col-md-4">
             <div class="card mb-3">
-              <img src="./img/melancia.jpg" alt="foto_gravida_1">
+              <img src="./img/familia2.jpg" alt="foto_gravida_1">
               <div class="card-body text-center">
-                <h5 class="card-title">Grávida 01</h5>
+                <h5 class="card-title">Casais 02<br>R$15,00</h5>
                 <a href="" class="btn btn-dark btn-block">Comprar</a>
               </div>
             </div>
@@ -116,20 +182,339 @@
           <!-- card 3 -->
            <div class="col-md-4">
             <div class="card mb-3">
-              <img src="./img/melancia.jpg" alt="foto_gravida_1">
+              <img src="./img/familia2.jpg" alt="foto_gravida_1">
               <div class="card-body text-center">
-                <h5 class="card-title">Grávida 01</h5>
+                <h5 class="card-title">Casais 03<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- linha 2 Feminino-->
+        <div class="row" id="feminino-ancora">
+
+          <!-- card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/feminino.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Feminino 01<br>R$15,00</h5>
                 <a href="" class="btn btn-dark btn-block">Comprar</a>
               </div>
             </div>
           </div>
 
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/feminino.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Feminino 02<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
 
-
+          <!-- card 3 -->
+           <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/feminino.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Feminino 03<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- linha 3 Masculino -->
+        <div class="row" id="masculino-ancora">
+
+          <!-- card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/masculino.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Masculino 04<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/masculino.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Masculino 05<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+           <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/masculino.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Masculino 06<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Título GESTANTES -->
+        <div class="row text-secondary mt-2 border-top pt-3">
+          <div class="col-md-12">
+            <h2 id="gestante-ancora">Gestantes</h2>
+          </div>
+        </div>
+
+        <!-- linha 1 GESTANTES -->
+        <div class="row" id="gestante-ancora">
+
+          <!-- card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/gravida.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Gestante 01<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/gravida2.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Gestante 02<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+           <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/gravida3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Gestante 03<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- linha 2 GESTANTES-->
+        <div class="row">
+
+          <!-- card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/gravida.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Gestante 04<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/gravida2.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Gestante 05<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+           <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/gravida3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Gestante 06<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Título NEWBORN -->
+        <div class="row text-secondary mt-2 border-top pt-3">
+          <div class="col-md-12">
+            <h2 id="newborn-ancora">Newborn</h2>
+          </div>
+        </div>
+
+        <!-- linha 1 newborn -->
+        <div class="row">
+
+          <!-- card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/newborn.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Newborn 01<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/newborn.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Newborn 02<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+           <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/newborn.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Newborn 03<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- linha 2 newborn-->
+        <div class="row">
+
+          <!-- card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/newborn3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Newborn 04<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/newborn3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Newborn 05<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+           <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/newborn3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Newborn 06<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Título FAMÍLIA -->
+        <div class="row text-secondary mt-2 border-top pt-3" id="familia-ancora">
+          <div class="col-md-12">
+            <h2>Família</h2>
+          </div>
+        </div>
+
+        <!-- linha 1 familia -->
+        <div class="row">
+
+          <!-- card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/familia3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Família 01<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/familia3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Família 02<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+           <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/familia3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Família 03<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- linha 2 familia-->
+        <div class="row">
+
+          <!-- card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/familia3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Família 04<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/familia2.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Família 05<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 3 -->
+           <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="./img/familia3.jpg" alt="foto_gravida_1">
+              <div class="card-body text-center">
+                <h5 class="card-title">Família 06<br>R$15,00</h5>
+                <a href="" class="btn btn-dark btn-block">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botão - subir para o início da página -->
+        <a class="btn" id="btn-subir" href="#inicio-ancora"><i class="bi bi-caret-up-square-fill"><br>INÍCIO</i></a>
 
       </section>
 
+      
+      
     </main>
 
 
@@ -137,7 +522,7 @@
       <!-- Grid container -->
       <div class="container p-4 pb-0">
         <!-- Section: Social media -->
-        <section class="mb-4">
+        <section class="mb-0" id="redes-sociais">
           <!-- Facebook -->
           <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button">
             <i class="bi bi-facebook"></i>
@@ -203,5 +588,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
   </body>
 </html>
